@@ -1,6 +1,6 @@
 set(PROJECT_NAME CalibrationWizard)
+cmake_minimum_required(VERSION 3.10)
 project(${PROJECT_NAME})
-cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_STANDARD 11)
 
 set(EXECUTABLE_OUTPUT_PATH bin)
@@ -8,6 +8,7 @@ file(MAKE_DIRECTORY "out/images/ini_calib")
 file(MAKE_DIRECTORY "out/images/nextpose")
 
 # add OpenCV library
+set(OpenCV_DIR "/Users/clarkbaeker/Documents/projects/opencv/build_opencv-4.12.0")
 find_package( OpenCV REQUIRED )
 
 # add source files

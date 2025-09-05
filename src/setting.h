@@ -132,11 +132,11 @@ public:
         }
         
         flag = 0;
-        if(calibFixPrincipalPoint) flag |= CV_CALIB_FIX_PRINCIPAL_POINT;
-        if(calibZeroTangentDist)   flag |= CV_CALIB_ZERO_TANGENT_DIST;
-        if(aspectRatio)            flag |= CV_CALIB_FIX_ASPECT_RATIO;
-        if(calibZerok1Dist)        flag |= CV_CALIB_FIX_K1;
-        if(calibZerok2Dist)        flag |= CV_CALIB_FIX_K2;
+        if(calibFixPrincipalPoint) flag |= CALIB_FIX_PRINCIPAL_POINT;
+        if(calibZeroTangentDist)   flag |= CALIB_ZERO_TANGENT_DIST;
+        if(aspectRatio)            flag |= CALIB_FIX_ASPECT_RATIO;
+        if(calibZerok1Dist)        flag |= CALIB_FIX_K1;
+        if(calibZerok2Dist)        flag |= CALIB_FIX_K2;
         
         
         
@@ -162,11 +162,10 @@ public:
             view0.copyTo(result);
         }
         else if( atImageList < (int)imageList.size() )
-            result = imread(imageList[atImageList++], CV_LOAD_IMAGE_COLOR);
-        
+            result = imread(imageList[atImageList++], cv::IMREAD_COLOR);
+
         return result;
     }
-    
     static bool readStringList( const string& filename, vector<string>& l )
     {
         l.clear();

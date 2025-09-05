@@ -32,7 +32,7 @@ cd build
 cmake ..
 make
 ```
-Tested working on Mac OSX, OpenCV 2.4.11 and MATLAB R2015b.
+Tested working on Mac OSX, OpenCV 4.12.0 and MATLAB R2015b.
 
 ## Usage
 

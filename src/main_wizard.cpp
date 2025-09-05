@@ -97,7 +97,7 @@ int main(int argc, const char * argv[])
     if (!fs.isOpened())
     {
         std::cout << "Could not open the configuration file: \"" << inputSettingsFile << "\"" << std::endl;
-        return false;
+        return -1;
     }
     fs["Settings"] >> *s;
     fs.release();// close Settings file

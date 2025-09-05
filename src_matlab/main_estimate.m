@@ -95,7 +95,7 @@ tic
 lb = [0, 0, 0, -tranlation_bound, -tranlation_bound, 0]; % lower bound
 ub = [2*pi, pi, 2*pi, tranlation_bound, tranlation_bound, mean(t_Vec(3,:))]; % upper bound
 
-options = saoptimset('Display', optim_display); % check other options for SA in https://www.mathworks.com/help/gads/saoptimset.html
+options = optimoptions('simulannealbnd', 'Display', optim_display); % check other options for SA in https://www.mathworks.com/help/gads/saoptimset.html
 if autoCorr_flag == 1
     ACMat_extend = zeros(size(ACMat) + [2*board_Height*board_Width, 2*board_Height*board_Width]);
     ACMat_extend(1:size(ACMat,1), 1:size(ACMat,2)) = ACMat;
